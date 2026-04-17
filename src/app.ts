@@ -4,6 +4,7 @@ import { StatusCodes } from 'http-status-codes';
 import globalErrorHandler from './app/middlewires/globalError';
 import { MessageRouter } from './app/modules/SendMeAMessage/TSendMeAMessage.route';
 import { ProjectRouter } from './app/modules/Project/Project.route';
+import { BlogRouter } from './app/modules/Blog/Blog.route';
 
 const app: Application = express();
 
@@ -13,6 +14,7 @@ app.use(cors());
 //all routes
 app.use('/api/p4', MessageRouter);
 app.use('/api/p4/projects', ProjectRouter);
+app.use('/api/p4/blogs', BlogRouter);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
