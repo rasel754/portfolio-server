@@ -7,8 +7,13 @@ const CreateSendMeAMessageIntoDB = async (payload: TSendMeAMessage): Promise<TSe
   return result;
 };
 
+const GetAllMessagesFromDB = async () => {
+  const result = await SendMeAMessageModel.find();
+  return result;
+};
+
 
 export const SendMeAMessageService = {
-    CreateSendMeAMessageIntoDB
+    CreateSendMeAMessageIntoDB,
+    GetAllMessagesFromDB
 }
-

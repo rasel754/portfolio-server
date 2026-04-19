@@ -12,4 +12,9 @@ router.post(
  
 );
 
+router.get(
+  '/',
+  SendMeAMessageController.GetAllMessages
+);
+
 export const MessageRouter = router;

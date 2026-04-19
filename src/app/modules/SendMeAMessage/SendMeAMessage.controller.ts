@@ -15,7 +15,18 @@ const CreateSendMeAMessage = catchAsync(async (req, res) => {
   });
 });
 
+const GetAllMessages = catchAsync(async (req, res) => {
+  const result = await SendMeAMessageService.GetAllMessagesFromDB();
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Messages retrieved successfully",
+    data: result,
+  });
+});
 
 export const SendMeAMessageController = {
   CreateSendMeAMessage,
+  GetAllMessages
 };
