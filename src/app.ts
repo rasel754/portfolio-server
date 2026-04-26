@@ -6,6 +6,7 @@ import { MessageRouter } from './app/modules/SendMeAMessage/TSendMeAMessage.rout
 import { ProjectRouter } from './app/modules/Project/Project.route';
 import { BlogRouter } from './app/modules/Blog/Blog.route';
 import { SkillRouter } from './app/modules/Skill/Skill.route';
+import { ToolRouter } from './app/modules/Tool/Tool.route';
 
 const app: Application = express();
 
@@ -17,6 +18,7 @@ app.use('/api/p4', MessageRouter);
 app.use('/api/p4/projects', ProjectRouter);
 app.use('/api/p4/blogs', BlogRouter);
 app.use('/api/p4/skills', SkillRouter);
+app.use('/api/p4/tools', ToolRouter);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
