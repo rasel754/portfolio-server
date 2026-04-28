@@ -7,7 +7,7 @@ const createBlogIntoDB = async (payload: TBlog): Promise<TBlog> => {
 };
 
 const getAllBlogsFromDB = async () => {
-  const result = await BlogModel.find();
+  const result = await BlogModel.find().sort({ createdAt: -1 });
   return result;
 };
 

@@ -7,7 +7,7 @@ const createProjectIntoDB = async (payload: TProject): Promise<TProject> => {
 };
 
 const getAllProjectsFromDB = async () => {
-  const result = await ProjectModel.find();
+  const result = await ProjectModel.find().sort({ createdAt: -1 });
   return result;
 };
 

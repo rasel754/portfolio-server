@@ -1,6 +1,6 @@
 import express, { Application, NextFunction, Request, Response } from 'express';
 import cors from 'cors';
-import { StatusCodes } from 'http-status-codes';
+
 import globalErrorHandler from './app/middlewires/globalError';
 import { MessageRouter } from './app/modules/SendMeAMessage/TSendMeAMessage.route';
 import { ProjectRouter } from './app/modules/Project/Project.route';

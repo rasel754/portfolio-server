@@ -10,7 +10,6 @@ const SendMeAMessageSchema = new mongoose.Schema<TSendMeAMessage>({
   email: {
     type: String,
     required: [true, 'Email is required'],
-    unique: true,
   },
   subject: {
     type: String,
